@@ -41,13 +41,13 @@ func Login(provider AuthProvider) {
 }
 
 func main() {
-  Login(GoogleAuthProvider{
-    token: "123",
-    secret: "456",
-  })
+	Login(GoogleAuthProvider{
+		token:  "123",
+		secret: "456",
+	})
 
-  Login(FacebookAuthProvider{
-    token: "123",
-    secret: "456",
-  })
+	Login(FacebookAuthProvider{
+		token:  "123",
+		secret: "456",
+	})
 }
