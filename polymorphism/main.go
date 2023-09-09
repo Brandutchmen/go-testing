@@ -41,7 +41,7 @@ func Login(provider AuthProvider) {
 }
 
 func main() {
-	Login(GoogleAuthProvider{
+  Login(GoogleAuthProvider{
 		token:  "123",
 		secret: "456",
 	})

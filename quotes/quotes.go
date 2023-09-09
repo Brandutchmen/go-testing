@@ -2,11 +2,9 @@ package quotes
 
 import (
 	"fmt"
+	"math/rand"
 
 	"rsc.io/quote"
-
-  "math/rand"
-  
 )
 
 func Hello(name string) string {
@@ -14,10 +12,14 @@ func Hello(name string) string {
 }
 
 func RandomGreeting(name string) string {
-  data := []string{
-        "Hi, %v. Welcome!",
-        "Great to see you, %v!",
-        "Hail, %v! Well met!",
-  }
-  return fmt.Sprintf(data[rand.Intn(len(data))], name)
+	data := []string{
+		"Hi, %v. Welcome!",
+		"Great to see you, %v!",
+		"Hail, %v! Well met!",
+    "Hello, %v!",
+    "Howdy, %v!",
+    "Salutations, %v!",
+    "Greetings, %v!",
+	}
+	return fmt.Sprintf(data[rand.Intn(len(data))], name)
 }
