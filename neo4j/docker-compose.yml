@@ -1,0 +1,22 @@
+version: "3.8"
+
+services:
+  neo4j:
+    image: neo4j:latest
+    ports:
+      - 7474:7474
+      - 7867:7867
+    environment:
+      NEO4J_AUTH: neo4j/password
+
+  main:
+    build:
+      dockerfile: dockerfile
+      context: ./
+    ports:
+      - 8080:8080
+    depends_on:
+      - neo4j
+    volumes:
+      - ./:/go/src/app/
+      - ./${GO_MOD}:/go/src/app/go.mod
